@@ -21,7 +21,7 @@
 			OutputDirectory="$(SolutionDir)$(ConfigurationName)"
 			IntermediateDirectory="$(ConfigurationName)"
 			ConfigurationType="2"
-			UseOfATL="1"
+			UseOfATL="0"
 			CharacterSet="1"
 			>
 			<Tool
@@ -65,7 +65,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="..\\lib\\tinyxml_d.lib"
+				AdditionalDependencies="..\\lib\\tinyxml_d.lib Msimg32.lib Comctl32.lib"
 				OutputFile="$(OutDir)\$(ProjectName)_d.dll"
 				GenerateDebugInformation="true"
 				AssemblyDebug="1"
@@ -99,7 +99,7 @@
 			OutputDirectory="$(SolutionDir)$(ConfigurationName)"
 			IntermediateDirectory="$(ConfigurationName)"
 			ConfigurationType="2"
-			UseOfATL="1"
+			UseOfATL="0"
 			CharacterSet="1"
 			WholeProgramOptimization="0"
 			>
@@ -142,7 +142,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="..\\lib\\tinyxml.lib"
+				AdditionalDependencies="..\\lib\\tinyxml.lib Msimg32.lib Comctl32.lib"
 				OutputFile="$(OutDir)\$(ProjectName).dll"
 				LinkIncremental="1"
 				GenerateDebugInformation="false"
@@ -176,7 +176,7 @@
 			OutputDirectory="$(SolutionDir)$(ConfigurationName)"
 			IntermediateDirectory="$(ConfigurationName)"
 			ConfigurationType="4"
-			UseOfATL="1"
+			UseOfATL="0"
 			CharacterSet="1"
 			>
 			<Tool
@@ -208,6 +208,7 @@
 				WarningLevel="3"
 				Detect64BitPortabilityProblems="false"
 				DebugInformationFormat="4"
+				ShowIncludes="false"
 			/>
 			<Tool
 				Name="VCManagedResourceCompilerTool"
@@ -243,7 +244,7 @@
 			OutputDirectory="$(SolutionDir)$(ConfigurationName)"
 			IntermediateDirectory="$(ConfigurationName)"
 			ConfigurationType="4"
-			UseOfATL="1"
+			UseOfATL="0"
 			CharacterSet="1"
 			WholeProgramOptimization="0"
 			>
@@ -313,6 +314,10 @@
 			Filter="cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx"
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 			>
+			<File
+				RelativePath=".\src\cpconv.cpp"
+				>
+			</File>
 			<File
 				RelativePath=".\src\DuiCaption.cpp"
 				>
@@ -482,10 +487,6 @@
 				>
 			</File>
 			<File
-				RelativePath=".\src\duiwndrichtxt.cpp"
-				>
-			</File>
-			<File
 				RelativePath=".\src\duiwndstyle.cpp"
 				>
 			</File>
@@ -498,15 +499,15 @@
 				>
 			</File>
 			<File
-				RelativePath=".\src\IECtrl.cpp"
-				>
-			</File>
-			<File
 				RelativePath=".\src\MemDC.cpp"
 				>
 			</File>
 			<File
 				RelativePath=".\src\MenuWndHook.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\src\SimpleWnd.cpp"
 				>
 			</File>
 		</Filter>
@@ -515,6 +516,10 @@
 			Filter="h;hpp;hxx;hm;inl;inc;xsd"
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
+			<File
+				RelativePath=".\include\cpconv.h"
+				>
+			</File>
 			<File
 				RelativePath=".\include\DuiCaption.h"
 				>
@@ -696,10 +701,6 @@
 				>
 			</File>
 			<File
-				RelativePath=".\include\duiwndrichtxt.h"
-				>
-			</File>
-			<File
 				RelativePath=".\include\duiwndstyle.h"
 				>
 			</File>
@@ -712,10 +713,6 @@
 				>
 			</File>
 			<File
-				RelativePath=".\include\IECtrl.h"
-				>
-			</File>
-			<File
 				RelativePath=".\include\MemDC.h"
 				>
 			</File>
@@ -724,9 +721,37 @@
 				>
 			</File>
 			<File
+				RelativePath=".\include\mybuffer.h"
+				>
+			</File>
+			<File
+				RelativePath=".\include\SimpleWnd.h"
+				>
+			</File>
+			<File
 				RelativePath=".\include\stree.hpp"
 				>
 			</File>
+			<Filter
+				Name="wtl.mini"
+				>
+				<File
+					RelativePath=".\include\wtl.mini\duicrack.h"
+					>
+				</File>
+				<File
+					RelativePath=".\include\wtl.mini\duigdi.h"
+					>
+				</File>
+				<File
+					RelativePath=".\include\wtl.mini\duimisc.h"
+					>
+				</File>
+				<File
+					RelativePath=".\include\wtl.mini\duistr.h"
+					>
+				</File>
+			</Filter>
 		</Filter>
 		<Filter
 			Name="dllmain"
